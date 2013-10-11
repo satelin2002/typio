@@ -331,7 +331,7 @@ img {
 }
 .pen-menu [class^="icon-"]:before,
 .pen-menu [class*=" icon-"]:before {
-    font-family: "pen";
+    font-family: 'pen';
     font-style: normal;
     font-weight: normal;
     speak: none;
