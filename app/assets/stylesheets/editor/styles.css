@@ -329,21 +329,20 @@ img {
     font-weight: normal;
     font-style: normal;
 }
-.pen-menu [class^="icon-"]:before,
-.pen-menu [class*=" icon-"]:before {
-    font-family: 'pen';
-    font-style: normal;
-    font-weight: normal;
-    speak: none;
-    display: inline-block;
-    text-decoration: inherit;
-    width: 1em;
-    margin-right: .2em;
-    text-align: center;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1em;
-    margin-left: .2em;
+.pen-menu [class^="icon-"]:before, .pen-menu [class*=" icon-"]:before {
+  font-family: "pen";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
 }
 .pen-menu .icon-location:before {
     content: '\e815'
