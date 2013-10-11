@@ -1,0 +1,430 @@
+* {
+margin:0;
+padding:0;
+-webkit-font-smoothing:antialiased;
+text-rendering: optimizeLegibility;
+}
+
+body {
+width:800px;
+font-family: "ff-tisa-web-pro",serif;", Palatino, Optima, Georgia, serif;margin:0 auto;
+padding:20px 20px 20px;
+color: #444442;
+background: #fcfcfc;
+}
+
+small {
+color:#999;
+}
+
+#toolbar {
+margin-bottom:1em;
+position:fixed;
+left:20px;
+margin-top:5px;
+}
+
+#toolbar [class^="icon-"]:before,#toolbar [class*=" icon-"]:before {
+font-family:pen;
+}
+
+#mode {
+color:#1abf89;
+cursor:pointer;
+}
+
+#mode.disabled {
+color:#666;
+}
+
+#fork {
+position:fixed;
+right:0;
+top:0;
+}
+
+/*! Licensed under MIT, https://github.com/sofish/pen */
+/*! Licensed under MIT, https://github.com/sofish/pen */
+/* basic reset */
+.pen,
+.pen-menu,
+.pen-input,
+.pen textarea {
+    font: 400 1.5em/1.30 Palatino, Optima, Georgia, serif;
+	font-family: "inconsolata", Palatino, Optima, Georgia, serif;margin:0 auto;
+	font-style: normal;
+	font-weight: 400;
+	color: #333332;
+}
+.yang .pen,
+.yang .pen-menu,
+.yang .pen-input,
+.yang .pen textarea {
+    font: 400 1.5em/1.30 Palatino, Optima, Georgia, serif;
+	font-family: "inconsolata", Palatino, Optima, Georgia, serif;margin:0 auto;
+	font-style: normal;
+	font-weight: 400;
+	color: #fafafa;
+}
+
+.pen:focus {
+    outline: none
+}
+.pen fieldset,
+img {
+    border: 0
+}
+.pen blockquote {
+    padding-left: 10px;
+    margin-left: -14px;
+    border-left: 4px solid #1abf89;
+}
+.pen a {
+    color:#2980b9;
+}
+.pen i {
+	font-family: "ff-tisa-web-pro",serif;
+	font-style: italic;
+	font-weight: 400;
+}
+.pen del {
+    text-decoration: line-through
+}
+.pen sub,
+.pen sup {
+    font-size: 75%;
+    position: relative;
+    vertical-align: text-top\9;
+}
+:root .pen sub,
+:root .pen sup {
+    vertical-align: baseline; /* for ie9 and other mordern browsers */
+}
+.pen sup {
+    top: -0.5em
+}
+.pen sub {
+    bottom: -0.25em
+}
+.pen hr {
+    border: none;
+    border-bottom: 1px solid #cfcfcf;
+    margin-bottom: 25px;
+    *color: pink;
+    *filter: chroma(color=pink);
+    height: 10px;
+    *margin: -7px 0 15px;
+}
+.pen small {
+    font-size: 0.8em;
+    color: #888;
+}
+.pen em,
+.pen b,
+.pen strong {
+    font-weight: 700
+}
+.pen pre {
+    white-space: pre-wrap;
+    padding: 0.85em;
+    background: #f8f8f8;
+}
+/* block-level element margin */
+.pen p,
+.pen pre,
+.pen ul,
+.pen ol,
+.pen dl,
+.pen form,
+.pen table,
+.pen blockquote {
+    margin-bottom: 16px
+}
+/* headers */
+.pen h1,
+.pen h2,
+.pen h3,
+.pen h4,
+.pen h5,
+.pen h6 {
+    margin-bottom: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.pen h1 {
+    font-size: 2em
+}
+.pen h2 {
+    font-size: 1.8em;
+	font-family: Palatino, Optima, Georgia, serif;
+	font-style: normal;
+	font-weight: 600;
+}
+.pen h3 {
+    font-size: 1.5em;
+	font-family: Palatino, Optima, Georgia, serif;
+	font-style: normal;
+	font-weight: 400;
+}
+.pen h4 {
+    font-size: 1.4em
+}
+.pen h5,
+.pen h6 {
+    font-size: 1.2em
+}
+/* listÂ */
+.pen ul,
+.pen ol {
+    margin-left: 1.2em
+}
+.pen ul,
+.pen-ul {
+    list-style: disc
+}
+.pen ol,
+.pen-ol {
+    list-style: decimal
+}
+ .pen li ul,
+ .pen li ol,
+ .pen-ul ul,
+ .pen-ul ol,
+ .pen-ol ul,
+ .pen-ol ol {
+     margin: 0 2em 0 1.2em
+ }
+ .pen li ul,
+ .pen-ul ul,
+ .pen-ol ul {
+     list-style: circle
+ }
+/* pen menu */
+.pen-menu,
+.pen-input {
+    font-size: 14px;
+    line-height: 1;
+}
+.pen-menu {
+	white-space:nowrap;
+	box-shadow:1px 2px 3px -2px #222;
+	background:#333;
+	background-image:linear-gradient(tobottom,#222,#333);
+	position:fixed;
+	height:38px;
+	border:1px solid #333;
+	border-radius:5px;
+	display:none;
+	z-index:1000;
+	font-family:ff-tisa-web-pro,serif;
+	font-style:normal;
+	font-weight:700;
+	box-shadow:0 1px 3px -1px rgba(0,0,0,0.7),inset 0 0 1px rgba(255,255,255,0.07),inset 0 0 2px rgba(255,255,255,0.15000000000000002);
+	background-image:linear-gradient(tobottom,rgba(49,49,47,0.97),#262625);
+	background-repeat:repeat-x;
+	border-color:#262625 #1c1c1b #121211;
+
+	visibility:visible;
+	-webkit-transition:top .075s ease-out,left .075s ease-out;
+	-moz-transition:top .075s ease-out,left .075s ease-out;
+	-ms-transition:top .075s ease-out,left .075s ease-out;
+	-o-transition:top .075s ease-out,left .075s ease-out;
+	transition:top .075s ease-out,left .075s ease-out;
+	-webkit-animation:pop-upwards 180ms forwards linear;
+	-moz-animation:pop-upwards 180ms forwards linear;
+	-ms-animation:pop-upwards 180ms forwards linear;
+	-o-animation:pop-upwards 180ms forwards linear;
+	animation:pop-upwards 180ms forwards linear;
+}
+.pen-menu:after {
+    top: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+.pen-menu:after {
+    border-color: rgba(51, 51, 51, 0);
+    border-top-color: #333;
+    border-width: 6px;
+    left: 50%;
+    margin-left: -6px;
+}
+.pen-icon {
+	font:normal 900 17px/40px Georgia serif;
+	min-width:20px;
+	display:inline-block;
+	height:38px;
+	overflow:hidden;
+	color:#fff;
+	text-align:center;
+	cursor:pointer;
+	-moz-user-select:none;
+	-webkit-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	-webkit-font-smoothing:antialiased;
+	font-family: "ff-tisa-web-pro",serif;
+	font-style: normal;
+	font-weight: 700;
+	padding:0 10px;
+	text-rendering: optimizeLegibility;
+    
+}
+.pen-icon:first-of-type {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.pen-icon:last-of-type {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.pen-icon:hover {
+    background: #000
+}
+.pen-icon.active {
+	color:#3fc3fc;
+    
+}
+.pen-input {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 38px;
+    line-height: 20px;
+    background: #333;
+    color: #fff;
+    border: none;
+    text-align: center;
+    display: none;
+    font-family: arial, sans-serif;
+	font-family: "ff-tisa-web-pro",serif;
+	font-style: normal;
+	font-weight: 700;
+}
+.pen-input:focus {
+    outline: none
+}
+.pen-textarea {
+    display: block;
+    background: #f8f8f8;
+    padding: 20px;
+}
+.pen textarea {
+    font-size: 14px;
+    border: none;
+    background: none;
+    width: 100%;
+	_height: 200px;
+    min-height: 200px;
+    resize: none;
+}
+@font-face {
+    font-family: 'pen';
+    src: url('font/fontello.eot?370dad08');
+    src: url('font/fontello.eot?370dad08#iefix') format('embedded-opentype'), url('font/fontello.woff?370dad08') format('woff'), url('font/fontello.ttf?370dad08') format('truetype'), url('font/fontello.svg?370dad08#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.pen-menu [class^="icon-"]:before,
+.pen-menu [class*=" icon-"]:before {
+    font-family: "pen";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+}
+.pen-menu .icon-location:before {
+    content: '\e815'
+} /* 'î •' */
+.pen-menu .icon-fit:before {
+    content: '\e80f'
+} /* 'î ' */
+.pen-menu .icon-bold:before {
+    content: '\e805'
+} /* 'î …' */
+.pen-menu .icon-italic:before {
+    content: '\e806'
+} /* 'î †' */
+.pen-menu .icon-justifyleft:before {
+    content: '\e80a'
+} /* 'î Š' */
+.pen-menu .icon-justifycenter:before {
+    content: '\e80b'
+} /* 'î ‹' */
+.pen-menu .icon-justifyright:before {
+    content: '\e80c'
+} /* 'î Œ' */
+.pen-menu .icon-justifyfull:before {
+    content: '\e80d'
+} /* 'î ' */
+.pen-menu .icon-outdent:before {
+    content: '\e800'
+} /* 'î €' */
+.pen-menu .icon-indent:before {
+    content: '\e801'
+} /* 'î ' */
+.pen-menu .icon-mode:before {
+    content: '\e813'
+} /* 'î “' */
+.pen-menu .icon-fullscreen:before {
+    content: '\e80e'
+} /* 'î Ž' */
+.pen-menu .icon-insertunorderedlist:before {
+    content: '\e802'
+} /* 'î ‚' */
+.pen-menu .icon-insertorderedlist:before {
+    content: '\e803'
+} /* 'î ƒ' */
+.pen-menu .icon-strikethrough:before {
+    content: '\e807'
+} /* 'î ‡' */
+.pen-menu .icon-underline:before {
+    content: '\e804'
+} /* 'î „' */
+.pen-menu .icon-blockquote:before {
+    content: '\e814'
+} /* 'î ”' */
+.pen-menu .icon-undo:before {
+    content: '\e817'
+} /* 'î —' */
+.pen-menu .icon-pre:before {
+    content: '\e816'
+} /* 'î –' */
+.pen-menu .icon-unlink:before {
+    content: '\e811'
+} /* 'î ‘' */
+.pen-menu .icon-superscript:before {
+    content: '\e808'
+} /* 'î ˆ' */
+.pen-menu .icon-subscript:before {
+    content: '\e809'
+} /* 'î ‰' */
+.pen-menu .icon-inserthorizontalrule:before {
+    content: '\e818'
+} /* 'î ˜' */
+.pen-menu .icon-pin:before {
+    content: '\e812'
+} /* 'î ’' */
+.pen-menu .icon-createlink:before {
+    content: '\e810'
+} /* 'î ' */
+
+div[data-placeholder]:not(:focus):not([data-div-placeholder-content]):before {
+    content: attr(data-placeholder);
+    float: left;
+    margin-left: 2px;
+    color: #b3b3b3;
+}
+ 
