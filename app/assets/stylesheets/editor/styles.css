@@ -50,18 +50,18 @@ top:0;
 .pen-menu,
 .pen-input,
 .pen textarea {
-    font: 400 1.5em/1.30 Palatino, Optima, Georgia, serif;
-	font-family: "inconsolata", Palatino, Optima, Georgia, serif;margin:0 auto;
+    font: 400 1.16em/1.45 Palatino, Optima, Georgia, serif;
+	font-family: Palatino, Optima, Georgia, serif;
 	font-style: normal;
 	font-weight: 400;
-	color: #333332;
+	color: #444442;
 }
 .yang .pen,
 .yang .pen-menu,
 .yang .pen-input,
 .yang .pen textarea {
-    font: 400 1.5em/1.30 Palatino, Optima, Georgia, serif;
-	font-family: "inconsolata", Palatino, Optima, Georgia, serif;margin:0 auto;
+    font: 400 1.16em/1.45 Palatino, Optima, Georgia, serif;
+	font-family: Palatino, Optima, Georgia, serif;
 	font-style: normal;
 	font-weight: 400;
 	color: #fafafa;
