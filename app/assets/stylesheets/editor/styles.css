@@ -7,7 +7,7 @@ text-rendering: optimizeLegibility;
 
 body {
 width:800px;
-font-family: "ff-tisa-web-pro",serif;", Palatino, Optima, Georgia, serif;margin:0 auto;
+font-family: 'ff-tisa-web-pro',serif, Palatino, Optima, Georgia, serif;margin:0 auto;
 color: #444442;
 background: #fcfcfc;
 }
