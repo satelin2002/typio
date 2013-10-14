@@ -19,8 +19,33 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :confirmable
+         :recoverable, :rememberable, :trackable, :validatable, :confirmable, :omniauthable
 
+
+  def self.find_for_google_oauth2(auth, signed_in_resource=nil)
+    user = User.where(:email => auth.info.email).first
+    if user  
+      user.provider = auth.provider
+      user.uid = auth.uid
+      user.confirm! unless user.confirmed?
+    else
+      user = User.new(:email => auth.info.email, 
+        :password =>  Devise.friendly_token[0,20],
+        :provider => auth.provider,
+        :uid => auth.uid,
+        :first_name => auth.info.first_name,
+        :last_name => auth.info.last_name)
+      
+      user.remote_avatar_url = auth.info.image
+      user.skip_confirmation!
+      user.save!
+    end
+    user
+  rescue => e
+    logger.error e.message
+    logger.error e.backtrace
+  end
+  
 end
 
 # == Schema Information

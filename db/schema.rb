@@ -66,6 +66,8 @@ ActiveRecord::Schema.define(version: 20131009184308) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
+    t.string   "provider"
+    t.string   "uid"
     t.string   "first_name"
     t.string   "last_name"
     t.string   "role"

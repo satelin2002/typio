@@ -70,3 +70,4 @@ gem 'pg'
 # gem 'debugger', group: [:development, :test]
 gem 'rails_12factor', group: :production
 gem 'font_assets'
+gem 'rmagick', '2.13.2'

@@ -1,90 +1,90 @@
 <div class="yin">
-<div class="overlay">
-    <div class="wordcount modal">
-        <h1>Target Word Count</h1>
-        <div>
-            <input type="number" name="quantity" value="0" min="0"></input>
+    <div class="overlay">
+        <div class="wordcount modal">
+            <h1>Target Word Count</h1>
+            <div>
+                <input type="number" name="quantity" value="0" min="0"></input>
+            </div>
+        </div>
+        <div class="description modal">
+            <h1> About ZenPen </h1>
+            <p>  Zenpen is a minimalist writing zone by <a href="http://tholman.com">Tim Holman</a> (<a href="http://twitter.com/twholman">@twholman</a>), to get you into that zone, where you can focus on the writing - with none of the distractions. ZenPen is open source on <a href="http://github.com/tholman/zenpen">Github</a> (with many improvements on the way!). If you have any questions, hit me up via <a href="mailto:timothy.w.holman@gmail.com">email</a> - ooh, you can follow me on twitter for updates too: <a href="http://twitter.com/twholman">@twholman</a> </p>
+        </div>
+        <div class="saveoverlay modal">
+            <h1>Select save format</h1>
+            <p class='saveselection'>
+                <span data-format='markdown'>Markdown</span>
+                <span data-format='html'>HTML</span>
+                <span data-format='plain'>Plain Text</span>
+            </p>
+            <button class='savebutton useicons'>&#xe006;</button>
+            <div> Or select format and press ctrl+c (cmd+c on mac) to copy the text. </div>
+            <textarea class='hiddentextbox'></textarea>
         </div>
     </div>
-    <div class="description modal">
-        <h1> About ZenPen </h1>
-        <p>  Zenpen is a minimalist writing zone by <a href="http://tholman.com">Tim Holman</a> (<a href="http://twitter.com/twholman">@twholman</a>), to get you into that zone, where you can focus on the writing - with none of the distractions. ZenPen is open source on <a href="http://github.com/tholman/zenpen">Github</a> (with many improvements on the way!). If you have any questions, hit me up via <a href="mailto:timothy.w.holman@gmail.com">email</a> - ooh, you can follow me on twitter for updates too: <a href="http://twitter.com/twholman">@twholman</a> </p>
-    </div>
-    <div class="saveoverlay modal">
-        <h1>Select save format</h1>
-        <p class='saveselection'>
-            <span data-format='markdown'>Markdown</span>
-            <span data-format='html'>HTML</span>
-            <span data-format='plain'>Plain Text</span>
-        </p>
-        <button class='savebutton useicons'>&#xe006;</button>
-        <div> Or select format and press ctrl+c (cmd+c on mac) to copy the text. </div>
-        <textarea class='hiddentextbox'></textarea>
-    </div>
-</div>
-<div class="text-options">
-    <div class="options">
-        <span class="no-overflow">
-        <span class="lengthen ui-inputs">
-        <button class="url useicons">&#xe005;</button>
-        <input class="url-input" type="text" placeholder="Type or Paste URL here"/>
-        <button class="bold">b</button>
-        <button class="italic">i</button>
-        <button class="quote">&rdquo;</button>
-        </span>
-        </span>
-    </div>
-</div>
-<div class="ui">
-    <div class="wrapper">
-        <div class="top editing animated bounceInUp">
-            <button class="fullscreen useicons" title="Toggle fullscreen">
-            &#xe000;
-            </button>
-            <button class="color-flip useicons" title="Invert colors">
-            &#xe001;
-            </button>
-            <button class="target useicons" title="Set target word count">
-            &#xe00d;
-            </button>
-            <button class="save useicons" title="Save Text">
-            &#xe00f;
-            </button>
-            <button class="tag useicons" title="Tag">
-            &#xe008;
-            </button>
+    <div class="text-options">
+        <div class="options">
+            <span class="no-overflow">
+            <span class="lengthen ui-inputs">
+            <button class="url useicons">&#xe005;</button>
+            <input class="url-input" type="text" placeholder="Type or Paste URL here"/>
+            <button class="bold">b</button>
+            <button class="italic">i</button>
+            <button class="quote">&rdquo;</button>
+            </span>
+            </span>
         </div>
-	</div>
-</div>
-<div class="word-counter">
-    <span class="progress"></span>
-</div>
-<section>
-	<header contenteditable="true" class="header">
-		Edge Cache Location Architecture
-	</header>
-    <div data-toggle="pen" data-placeholder="" class='editable content'>
-		 
-		  <h2>Enjoy live editing (+markdown)</h2>
-
-		  <p><b><i>Click to edit, Select to apply effect, click items of toolbar to toggle effects.</i></b></p>
-		  <hr>
-		  <p>Horizontafsdfl-Rule can be insert by click「...」on the toolbar or just type「... 」/「--- 」/「*** 」at line start. Note that
-		    there's a SPACE at the end of a command.</p>
-		  <hr>
-		  <p>To link or unlink, please press the <i>ENTER</i> key after you filled the input field with your a link. A <a href="/sofish">link</a> can be unlink by apply an empty value to the input field.
-
-		  </p><p>
-		  </p><ul>
-		    <li>Ordered list and unordered list is supported.</li>
-		    <li>Use the toolbar or use markdown syntax like「<b>1. </b>」,「<b>- </b>」or「<b>* </b>」</li>
-		  </ul>
-		  <blockquote>You can quote text by type「<b>&gt;</b>」at line start.</blockquote>
-		  <p>What about add underline to text? "<u>Stay Hungry, Stay Foolish - <i>Steve Jobs</i></u>".</p>
-		  <pre>A code block is also support by type 「```」 at line start and press SPACE.</pre>
-		  <p>For more, please checkout: <a href="https://github.com/sofish/pen#readme" target="_blank">https://github.com/sofish/pen#readme</a>
-		  </p>
-		 
     </div>
-</section>
+    <div class="ui">
+        <div class="wrapper">
+            <div class="top editing animated bounceInUp">
+                <button class="fullscreen useicons" title="Toggle fullscreen">
+                &#xe000;
+                </button>
+                <button class="color-flip useicons" title="Invert colors">
+                &#xe001;
+                </button>
+                <button class="target useicons" title="Set target word count">
+                &#xe00d;
+                </button>
+                <button class="save useicons" title="Save Text">
+                &#xe00f;
+                </button>
+                <button class="tag useicons" title="Tag">
+                &#xe008;
+                </button>
+            </div>
+    	</div>
+    </div>
+    <div class="word-counter">
+        <span class="progress"></span>
+    </div>
+    <section>
+    	<header contenteditable="true" class="header">
+    		Edge Cache Location Architecture
+    	</header>
+        <div data-toggle="pen" data-placeholder="" class='editable content'>
+    		 
+    		  <h2>Enjoy live editing (+markdown)</h2>
+
+    		  <p><b><i>Click to edit, Select to apply effect, click items of toolbar to toggle effects.</i></b></p>
+    		  <hr>
+    		  <p>Horizontafsdfl-Rule can be insert by click「...」on the toolbar or just type「... 」/「--- 」/「*** 」at line start. Note that
+    		    there's a SPACE at the end of a command.</p>
+    		  <hr>
+    		  <p>To link or unlink, please press the <i>ENTER</i> key after you filled the input field with your a link. A <a href="/sofish">link</a> can be unlink by apply an empty value to the input field.
+
+    		  </p><p>
+    		  </p><ul>
+    		    <li>Ordered list and unordered list is supported.</li>
+    		    <li>Use the toolbar or use markdown syntax like「<b>1. </b>」,「<b>- </b>」or「<b>* </b>」</li>
+    		  </ul>
+    		  <blockquote>You can quote text by type「<b>&gt;</b>」at line start.</blockquote>
+    		  <p>What about add underline to text? "<u>Stay Hungry, Stay Foolish - <i>Steve Jobs</i></u>".</p>
+    		  <pre>A code block is also support by type 「```」 at line start and press SPACE.</pre>
+    		  <p>For more, please checkout: <a href="https://github.com/sofish/pen#readme" target="_blank">https://github.com/sofish/pen#readme</a>
+    		  </p>
+    		 
+        </div>
+    </section>
 </div>

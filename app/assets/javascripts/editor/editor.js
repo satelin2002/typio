@@ -1,4 +1,3 @@
-/*! Licensed under MIT, https://github.com/sofish/pen */
 ~function(doc) {
 
   var Pen, FakePen, utils = {};
@@ -214,7 +213,7 @@
 
   // highlight menu
   Pen.prototype.highlight = function() {
-    var node = this._sel.focusNode
+    var node = this._sel.anchorNode
       , effects = this._effectNode(node)
       , menu = this._menu
       , highlight;
@@ -345,7 +344,7 @@
   };
 
   Pen.prototype.rebuild = function() {
-    return this.destroy('it\'s a joke');
+    return this.destroy('rebuild');
   };
 
   // a fallback for old browers
